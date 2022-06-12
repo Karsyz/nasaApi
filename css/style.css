@@ -22,6 +22,7 @@ img{
 
 body {
   height: 100vh;
+  /* min-width: 300px; */
   background: linear-gradient(150deg, rgb(89, 11, 138) 20%, rgb(228, 49, 198) );
   display:flex;
   flex-direction: column;
@@ -56,24 +57,19 @@ h1, h2, h3, p {
 .cont2 {
   width: 80vw;
   max-width: 1000px;
-  /* max-height: 50vh; */
   margin-bottom: 5vh;
   background: rgba(255, 255, 255, 0.8);
   color: rgb(0, 0, 0);
   border: 2px solid rgba(83, 101, 117, 0.63);
   font-family: Helvetica, Arial, sans-serif;
   padding: 20px;
-  /* overflow: scroll; */
 }
 
 .cont2 > h2 {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .centerButtons {
-  /* min-width: 100px;
-  max-width: 150px; */
-  /* border: 2px solid rgba(152, 173, 204, 0.274); */
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,10 +91,6 @@ button {
   margin-left: 10px;
 }
 
-.none {
-  display: none;
-}
-
 span.copyright {
   position: absolute;
   left: 10px;
@@ -108,8 +100,8 @@ span.copyright {
 }
 
 span.topRight {
-  align-self: flex-end;
-  cursor: pointer;
+  display: inline;
+  cursor: default;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);
   color: rgb(0, 0, 0);
@@ -128,7 +120,7 @@ span.btmRight {
   bottom: 10px;  
   right: 10px;
   color: rgba(255, 255, 255, 0.562);
-  cursor: pointer;
+  cursor: default;
 }
 
 span.karsyz {
@@ -136,7 +128,7 @@ span.karsyz {
   top: 10px;  
   right: 10px;
   color: rgba(255, 255, 255, 0.562);
-  cursor: pointer;
+  cursor: default;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -144,26 +136,37 @@ span.karsyz {
   position: relative;
 }
 
-.overflowWrapper {
+.outsideContainer {
+  display: block;
   overflow: hidden;
-  position: relative;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* transition-duration: 2s; */
-}
-.hide {
-  bottom: -100vh;
+  position: absolute;
+  bottom: 0px;
 }
 
-.flx-col-rev {
-  flex-direction: column-reverse;
-  
-
+.outsideContainer:active  {
+  bottom: -50vh;
+  transition-duration: 0.5s;
 }
 
-.flex {
-  display:flex;
+.insideContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
 }
+
+.none {
+  display: none;
+}
+
+.textOverflow {
+  max-height: 25vh;
+  overflow: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 
 /******************************************
 /* Fade In
