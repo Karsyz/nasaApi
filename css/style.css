@@ -1,0 +1,203 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+body {
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(89, 11, 138) 20%, rgb(228, 49, 198) );
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.cont {
+  border: 2px solid rgba(152, 173, 204, 0.274);
+  border-radius: 10px;
+  font-family: 'Indie Flower', cursive;
+  padding: 25px;
+  margin: 0;
+  min-height: 150px;
+}
+
+.cont1 {
+  width: 80vw;
+  max-width: 500px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cont2 {
+  width: 80vw;
+  max-width: 1000px;
+  /* max-height: 50vh; */
+  margin-bottom: 5vh;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(83, 101, 117, 0.63);
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 20px;
+  /* overflow: scroll; */
+}
+
+.cont2 > h2 {
+  padding-bottom: 10px;
+}
+
+.centerButtons {
+  /* min-width: 100px;
+  max-width: 150px; */
+  /* border: 2px solid rgba(152, 173, 204, 0.274); */
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input, button {
+  background: transparent;
+  border: 2px solid rgba(152, 173, 204, 0.274);
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+
+button {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.none {
+  display: none;
+}
+
+span.copyright {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.562);
+}
+
+span.topRight {
+  align-self: flex-end;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(83, 101, 117, 0.63);
+  margin-bottom: 10px;
+}
+
+span.topRight:hover {
+  background: rgba(144, 163, 199, 0.8);
+  scale: 1.5;
+  transition-duration: 0.4s;
+}
+
+span.btmRight {
+  position: absolute;
+  bottom: 10px;  
+  right: 10px;
+  color: rgba(255, 255, 255, 0.562);
+  cursor: pointer;
+}
+
+span.karsyz {
+  position: absolute;
+  top: 10px;  
+  right: 10px;
+  color: rgba(255, 255, 255, 0.562);
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+}
+
+.relative {
+  position: relative;
+}
+
+.overflowWrapper {
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* transition-duration: 2s; */
+}
+.hide {
+  bottom: -100vh;
+}
+
+.flx-col-rev {
+  flex-direction: column-reverse;
+  
+
+}
+
+.flex {
+  display:flex;
+}
+
+/******************************************
+/* Fade In
+/*******************************************/
+
+.fadeIn {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
