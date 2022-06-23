@@ -38,7 +38,7 @@ function reset() {
 
 function minimize() {
     // document.querySelector('.overflowWrapper').classList.toggle('flx-col-rev')
-    // document.querySelector('.cont2').classList.toggle('hide')
+    document.querySelector('.cont2').classList.toggle('hide')
     if (document.querySelector('span.arrow').textContent === "arrow_downward") {
         document.querySelector('span.arrow').textContent = "arrow_upward"
     }else {
